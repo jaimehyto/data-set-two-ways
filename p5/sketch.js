@@ -17,7 +17,7 @@ function setup() {
     })
     .then(function (data) {
       console.log("Got data");
-      // console.log(data);
+      console.log(data);
       //HAVE YOU TURNED OFF AUTO-REFRESH?k
 
       classData = data.Character.ClassJobs; //classjobs array
