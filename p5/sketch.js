@@ -5,7 +5,7 @@ let loading = true;
 let url = "https://xivapi.com/character/42001477";
 
 function setup() {
-  createCanvas(1300, 500);
+  createCanvas(1300, 510);
   angleMode(DEGREES);
 
   //HAVE YOU TURNED OFF AUTO-REFRESH?
@@ -39,6 +39,9 @@ function draw() {
     text("Loading...", 0, height / 2 - 25, width, 50);
   } else {
     drawChart();
+    stroke(0);
+    line(20, 20, 20, 480);
+    line(20, 480, 1280, 480);
     //display using the simple line-graph code
     //HAVE YOU TURNED OFF AUTO-REFRESH?
   }
@@ -70,7 +73,6 @@ function drawChart() {
     textSize(12);
     textAlign(RIGHT, TOP);
     text(className, textX - 20, -textY);
-
     pop();
 
     fill(0);
@@ -78,11 +80,11 @@ function drawChart() {
     textSize(12);
     text(levelHeight, rectStartX + 10, 475);
 
-    stroke(0);
-    line(20, 20, 20, 480);
-    line(20, 480, 1280, 480);
+    text("FFXIV Character Jobs", width/2, 500);
 
     rectStartX += 40;
     textY += 40;
   }
+  
 }
+
